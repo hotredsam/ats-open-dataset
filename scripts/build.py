@@ -12,7 +12,8 @@ CLEAN = ROOT / "data" / "clean"
 def main() -> None:
     RAW.mkdir(parents=True, exist_ok=True)
     CLEAN.mkdir(parents=True, exist_ok=True)
-    print(f"raw files: {len(list(RAW.iterdir()))}")
+    raw = [p for p in RAW.iterdir() if not p.name.startswith(".")]
+    print(f"raw files: {len(raw)}")
 
 
 if __name__ == "__main__":

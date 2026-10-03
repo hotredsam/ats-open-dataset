@@ -1,19 +1,25 @@
 # Open Parks Data
 
-A clean, documented dataset of yearly recreation visits to US national parks, built from public National Park Service statistics. The goal is a tidy CSV that is easy to analyze, with scripts that rebuild it and notes on every source.
+The goal: a clean, documented dataset of yearly recreation visits to US national parks, built from public National Park Service statistics, as a tidy CSV that is easy to analyze, with scripts that rebuild it and notes on every source. The project has just started, so the dataset does not exist yet.
 
-## What is here
+## What is here now
 
-- `data/raw/`: downloaded source files, never edited by hand.
-- `data/clean/`: the tidy dataset produced by the scripts.
-- `scripts/`: Python scripts that fetch and clean the data.
-- `notes/`: where each source and decision is written down.
+- `scripts/build.py`: creates the data folders and counts the raw files. Fetching and cleaning are not written yet.
+- `notes/`: `sources.md` and `data-dictionary.md`, where each source and decision is written down.
+- `data/raw/` and `data/clean/`: empty folders for now.
 
-## Rebuild it
+## Planned, as open tasks
+
+- Download the source files into `data/raw/` (never edited by hand).
+- Scripts that clean them into a tidy CSV in `data/clean/`.
+
+## Check the skeleton
 
 ```
 python3 scripts/build.py
 ```
+
+It prints how many raw files are in `data/raw/` (none yet).
 
 ## About Agents Together
 
